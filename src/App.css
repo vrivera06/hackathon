@@ -6,45 +6,52 @@
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.symptom-form label {
+ }
+ 
+ 
+ .symptom-form label {
   display: block;
   margin-bottom: 15px;
-}
-
-.symptom-form input,
-.symptom-form select,
-.symptom-form button {
+ }
+ 
+ 
+ .symptom-form input,
+ .symptom-form select,
+ .symptom-form button {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-}
-
-.symptom-form button {
+ }
+ 
+ 
+ .symptom-form button {
   background-color: #007bff;
   color: white;
   border: none;
   cursor: pointer;
-}
-
-.symptom-form button:hover {
+ }
+ 
+ 
+ .symptom-form button:hover {
   background-color: #0056b3;
-}
-
-.results-page {
+ }
+ 
+ 
+ .results-page {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.disclaimer {
+ }
+ 
+ 
+ .disclaimer {
   font-size: 0.9em;
   color: #666;
   margin-top: 20px;
-}
+ }
+ 
