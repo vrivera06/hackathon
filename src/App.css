@@ -1,57 +1,78 @@
-/* Add to src/index.css */
-.symptom-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
- }
- 
- 
- .symptom-form label {
-  display: block;
-  margin-bottom: 15px;
- }
- 
- 
- .symptom-form input,
- .symptom-form select,
- .symptom-form button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
- }
- 
- 
- .symptom-form button {
+/* src/App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.home {
+  text-align: center;
+  padding: 20px 50px; /* Reduced top padding to 20px */
+  background: linear-gradient(135deg, #2c3e50, #1abc9c);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  position: relative; /* For positioning the disclaimer */
+}
+
+.home h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.home p {
+  font-size: 1.5rem;
+  color: #f4f4f4;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+.button-container {
+  margin-bottom: 40px;
+}
+
+.home button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
   background-color: #007bff;
   color: white;
   border: none;
-  cursor: pointer;
- }
- 
- 
- .symptom-form button:hover {
-  background-color: #0056b3;
- }
- 
- 
- .results-page {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
- }
- 
- 
- .disclaimer {
-  font-size: 0.9em;
-  color: #666;
-  margin-top: 20px;
- }
- 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home button:hover {
+  background-color: #0056b3;
+}
+
+.track-button {
+  background-color: #28a745;
+}
+
+.track-button:hover {
+  background-color: #218838;
+}
+
+.disclaimer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 800px;
+  width: 90%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 0.3rem; /* Much smaller font size */
+  color: #f4f4f4;
+  line-height: 1.4;
+  text-align: center;
+}
