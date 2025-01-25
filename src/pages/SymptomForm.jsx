@@ -32,6 +32,7 @@ function SymptomForm({ onSubmit }) {
 
   return (
     <div className="symptom-form">
+      <h1>Asthma Symptom Checker</h1>
       <form onSubmit={handleSubmit}>
         {/* Age */}
         <label>

@@ -1,7 +1,7 @@
 // src/components/Main.jsx
 import { useState } from "react";
-import SymptomForm from "../pages/SymptomForm";
-import ResultsPage from "./ResultsPage";
+import SymptomForm from "./components/SymptomForm";
+import ResultsPage from "./components/ResultsPage";
 
 function Main() {
   const [results, setResults] = useState(null);
@@ -23,7 +23,7 @@ function Main() {
     </div>
   );
 }
- 
+
 // Simulated AI analysis function
 const analyzeSymptoms = (data) => {
   const { wheezing, shortnessOfBreath, chestTightness, coughing } = data;
