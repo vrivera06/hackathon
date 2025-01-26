@@ -1,3 +1,4 @@
+
 // src/components/Main.jsx
 import { useState } from "react";
 import SymptomForm from "./components/SymptomForm";

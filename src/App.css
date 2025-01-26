@@ -1,63 +1,200 @@
 /* src/App.css */
-.symptom-form {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+}
+
+/* Animated gradient background */
+.home {
   text-align: center;
   padding: 20px 50px;
-  background: linear-gradient(135deg, #2c3e50, #1abc9c);
+  background: linear-gradient(-45deg, #6e48aa, #9d50bb, #ff7e5f, #feb47b);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.home h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  font-weight: 800;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease;
+}
+
+.home p {
+  font-size: 1.8rem;
+  margin-bottom: 50px;
+  animation: fadeInUp 1s 0.2s ease backwards;
+}
+
+.button-container {
+  margin-bottom: 40px;
+  animation: fadeInUp 1s 0.4s ease backwards;
+}
+
+.home button {
+  padding: 18px 40px;
+  font-size: 1.4rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.home button:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+.symptom-form {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  animation: fadeIn 0.8s ease;
 }
 
 .symptom-form h1 {
   font-size: 3rem;
+  margin-bottom: 40px;
   color: white;
-  margin-bottom: 20px;
-  font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: slideInDown 0.8s ease;
 }
 
-.symptom-form form {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 8px;
-  width: 100%;
+form {
   max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.8s ease;
 }
 
-.symptom-form label {
+label {
   display: block;
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-  color: white;
+  margin: 20px 0;
+  text-align: left;
+  color: #4a5568;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.symptom-form input,
-.symptom-form select {
+input, select {
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px 20px;
+  margin-top: 8px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
   font-size: 1rem;
-  background-color: white;
-  color: #333;
+  transition: all 0.3s ease;
 }
 
-.symptom-form button {
-  width: 100%;
-  padding: 15px;
-  font-size: 1.2rem;
-  background-color: #007bff;
+input:focus, select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+  outline: none;
+}
+
+button[type="submit"] {
+  background: #667eea;
   color: white;
+  padding: 15px 40px;
+  font-size: 1.1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
-.symptom-form button:hover {
-  background-color: #0056b3;
+button[type="submit"]:hover {
+  background: #764ba2;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(118, 75, 162, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Particle animation */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: float 20s infinite linear;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-100vh) translateX(100vw) scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-200vh) translateX(200vw) scale(0);
+    opacity: 0;
+  }
 }

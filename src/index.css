@@ -1,33 +1,30 @@
 /* src/index.css */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Add these to existing styles */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
+/* Enhanced form elements */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
 }
 
-/* Ensure the dashboard section is responsive */
-@media (max-width: 768px) {
-  .dashboard {
-    padding: 10px;
-  }
+/* Loading animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
 
-  .dashboard h2 {
-    font-size: 1.5rem;
-  }
-
-  .dashboard ul li {
-    font-size: 1rem;
-  }
-
-  .dashboard table th,
-  .dashboard table td {
-    padding: 8px;
-  }
+.loading-spinner {
+  animation: spin 1s linear infinite;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  width: 24px;
+  height: 24px;
 }
